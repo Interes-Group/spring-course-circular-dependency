@@ -11,9 +11,14 @@ public class ServiceA {
     private final ServiceB serviceB;
 
     @Autowired
-    public ServiceA(/*@Lazy*/ ServiceB serviceB) {
+    public ServiceA(@Lazy ServiceB serviceB) {
         this.serviceB = serviceB;
     }
+
+    // Setter-based DI
+//    public void setServiceB(ServiceB serviceB){
+//        this.serviceB = serviceB;
+//    }
 
     public String getSecret() {
         return secret;
