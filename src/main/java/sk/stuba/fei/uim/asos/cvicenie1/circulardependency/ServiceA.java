@@ -3,9 +3,9 @@ package sk.stuba.fei.uim.asos.cvicenie1.circulardependency;
 public class ServiceA {
 
     private final String secret = "A";
-    private final ServiceB serviceB;
+    private ServiceB serviceB;
 
-    public ServiceA(ServiceB serviceB) {
+    public void setServiceB(ServiceB serviceB) {
         this.serviceB = serviceB;
     }
 
