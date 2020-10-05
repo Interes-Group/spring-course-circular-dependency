@@ -1,12 +1,11 @@
 package sk.stuba.fei.uim.asos.cvicenie1.circulardependency;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class CircularDependencyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CircularDependencyApplication.class, args);
+        new ClassPathXmlApplicationContext(new String[]{"config.xml"});
     }
 }

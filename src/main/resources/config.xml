@@ -1,0 +1,9 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd ">
+    <bean class="sk.stuba.fei.uim.asos.cvicenie1.circulardependency.ServiceA" name="serviceA">
+        <constructor-arg name="serviceB" ref="serviceB"/>
+    </bean>
+    <bean class="sk.stuba.fei.uim.asos.cvicenie1.circulardependency.ServiceB" name="serviceB">
+        <constructor-arg name="serviceA" ref="serviceA"/>
+    </bean>
+</beans>
